@@ -89,6 +89,15 @@
       "options": {
         "jestConfig": "apps/shop/jest.config.ts"
       }
+    },
+    "component-test": {
+      "executor": "@nx/cypress:cypress",
+      "options": {
+        "cypressConfig": "apps/shop/cypress.config.ts",
+        "testingType": "component",
+        "devServerTarget": "shop:build",
+        "skipServe": true
+      }
     }
   },
   "tags": []
